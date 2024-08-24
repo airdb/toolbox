@@ -1,6 +1,6 @@
 module github.com/airdb/toolbox
 
-go 1.20
+go 1.23
 
 require (
 	github.com/airdb/sailor v0.0.12
