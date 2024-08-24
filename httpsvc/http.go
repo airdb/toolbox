@@ -34,7 +34,7 @@ type HTTPClient struct {
 }
 
 const (
-	UserAgent    = "sailor-agent/1.0.0"
+	UserAgent    = "toolbox-agent/1.0.0"
 	UserAgentKey = "User-Agent"
 	SchemeHTTP   = "http://"
 	SchemeHTTPS  = "https://"

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/airdb/sailor"
+	"github.com/airdb/toolbox"
 )
 
 type resp struct {
@@ -13,7 +13,7 @@ type resp struct {
 }
 
 func TestHTTPRequest(t *testing.T) {
-	client := sailor.NewHTTPClient()
+	client := toolbox.NewHTTPClient()
 
 	client.SetDomain("api.github.com")
 	client.SetEndpoint("/users/airdb")

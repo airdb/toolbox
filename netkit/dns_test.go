@@ -4,7 +4,7 @@ package netkit_test
 import (
 	"testing"
 
-	"github.com/airdb/sailor/dnsutil"
+	"github.com/airdb/toolbox/dnsutil"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

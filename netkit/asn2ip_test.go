@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/airdb/sailor/asn2ip"
+	"github.com/airdb/toolbox/asn2ip"
 )
 
 func TestRun(t *testing.T) {

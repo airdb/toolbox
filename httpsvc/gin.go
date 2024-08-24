@@ -3,7 +3,7 @@ package httpsvc
 import (
 	"context"
 
-	"github.com/airdb/sailor/deployutil"
+	"github.com/airdb/toolbox/deployutil"
 	"github.com/gin-gonic/gin"
 	"github.com/serverless-plus/tencent-serverless-go/events"
 	"github.com/serverless-plus/tencent-serverless-go/faas"

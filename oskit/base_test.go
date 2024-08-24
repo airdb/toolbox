@@ -3,7 +3,7 @@ package oskit_test
 import (
 	"testing"
 
-	"github.com/airdb/sailor/osutil"
+	"github.com/airdb/toolbox/osutil"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

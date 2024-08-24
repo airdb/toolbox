@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"text/template"
 
-	"github.com/airdb/sailor/byteutil"
+	"github.com/airdb/toolbox/byteutil"
 )
 
 func TemplateGenerateString(str string, data interface{}) (string, error) {

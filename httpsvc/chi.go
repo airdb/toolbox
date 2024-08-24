@@ -8,8 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/airdb/sailor/deployutil"
-	"github.com/airdb/sailor/version"
+	"github.com/airdb/toolbox/deployutil"
+	"github.com/airdb/toolbox/version"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
 	chiadapter "github.com/serverless-plus/tencent-serverless-go/chi"
