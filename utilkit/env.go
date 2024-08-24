@@ -7,15 +7,15 @@ type Env uint
 const (
 	EnvDev Env = iota + 1
 	EnvTest
-	EnvPro
-	EnvLive
+	EnvPre
+	EnvProd
 )
 
 var EnvMap = map[Env]string{
 	EnvDev:  "dev",
 	EnvTest: "test",
-	EnvPro:  "pro",
-	EnvLive: "live",
+	EnvPre:  "pre",
+	EnvProd: "prod",
 }
 
 func FromEnv(env Env) string {
@@ -37,7 +37,7 @@ func ToEnv(sEnv string) Env {
 }
 
 func IsLiveEnv(sEnv string) bool {
-	return sEnv == EnvMap[EnvLive]
+	return sEnv == EnvMap[EnvProd]
 }
 
 func GetEnvList() (envList []string) {
