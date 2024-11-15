@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/airdb/toolbox/deployutil"
-	"github.com/airdb/toolbox/sliceutil"
+	"github.com/airdb/toolbox/deploykit"
+	"github.com/airdb/toolbox/slicekit"
 )
 
 // Build version info.
@@ -43,14 +43,14 @@ func Init() {
 
 	Env = os.Getenv("ENV")
 	if Env == "" {
-		Env = deployutil.DeployStageDev
+		Env = deploykit.DeployStageDev
 	}
 }
 
 func GetBuildInfo() *BuildInfo {
 	return &BuildInfo{
 		GoVersion: runtime.Version(),
-		Env:       deployutil.GetDeployStage(),
+		Env:       deploykit.GetDeployStage(),
 		Repo:      Repo,
 		Version:   Version,
 		Swagger:   Swagger,
@@ -71,5 +71,5 @@ func (info *BuildInfo) ToString() string {
 }
 
 func (info *BuildInfo) ToProject() string {
-	return sliceutil.LastStringWithSplit(info.Repo, "/")
+	return slicekit.LastStringWithSplit(info.Repo, "/")
 }

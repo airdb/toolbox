@@ -6,7 +6,6 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/airdb/toolbox/oskit"
 	"github.com/airdb/toolbox/utilkit"
 )
 
@@ -43,14 +42,14 @@ func Init() {
 
 	Env = os.Getenv("ENV")
 	if Env == "" {
-		Env = oskit.DeployStageDev
+		Env = DeployStageDev
 	}
 }
 
 func GetBuildInfo() *BuildInfo {
 	return &BuildInfo{
 		GoVersion: runtime.Version(),
-		Env:       oskit.GetDeployStage(),
+		Env:       GetDeployStage(),
 		Repo:      Repo,
 		Version:   Version,
 		Swagger:   Swagger,

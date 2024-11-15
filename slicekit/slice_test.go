@@ -1,10 +1,10 @@
-package sliceutil_test
+package slicekit_test
 
 import (
 	"sort"
 	"testing"
 
-	"github.com/airdb/toolbox/sliceutil"
+	sliceutil "github.com/airdb/toolbox/slicekit"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

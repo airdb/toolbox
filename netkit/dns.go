@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/airdb/toolbox"
+	"github.com/airdb/toolbox/typekit"
 	"github.com/miekg/dns"
 	"golang.org/x/net/publicsuffix"
 )
@@ -83,7 +83,7 @@ func ToDomainWithDot(domain string) string {
 }
 
 func TrimDomainDot(domain string) string {
-	return strings.TrimSuffix(domain, toolbox.DelimiterDot)
+	return strings.TrimSuffix(domain, typekit.DelimiterDot)
 }
 
 func GetRootDomain(name string) (string, error) {
