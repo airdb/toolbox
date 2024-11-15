@@ -6,18 +6,27 @@ import (
 )
 
 const (
+	/*
+		Tips:
+		1. Aliyun is for chinese mainland. Alibaba cloud is for global.
+	*/
 	CloudPlatformAWS    = "aws"
 	CloudPlatformAliyun = "aliyun"
 
-	// The name from github, XD.
-	CloudPlatformTencent = "tencentyun"
+	CloudPlatformTencent = "tencent_cloud"
+	CloudPlatformOracle  = "oracle_cloud"
+	CloudPlatformAlibaba = "alibaba_cloud"
+	CloudPlatformHuawei  = "huawei_cloud"
+	CloudPlatformGoogle  = "google_cloud"
 )
 
 const (
-	DeployStageDev  = "dev"
-	DeployStageTest = "test"
-	DeployStagePre  = "pre"
-	DeployStageProd = "prod"
+	DeployStageLocal = "local"
+	DeployStageDev   = "dev"
+	DeployStageTest  = "test"
+	DeployStagePre   = "pre"
+	DeployStageProd  = "prod"
+	DeployStageDR    = "dr"
 )
 
 type DeployPolicy uint
