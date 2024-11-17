@@ -1,6 +1,7 @@
 package utilkit_test
 
 import (
+	"strings"
 	"testing"
 	"time"
 
@@ -8,14 +9,24 @@ import (
 )
 
 func TestGetNowLong(t *testing.T) {
-	utilkit.GetNowLong()
+	ts := utilkit.GetNowLong()
+	if ts == "" {
+		t.Errorf("Expected a valid timestamp, got %s", ts)
+	}
 }
 
 func TestGetYearMonthDay(t *testing.T) {
-	utilkit.GetYearMonthDay()
+	today := utilkit.GetYearMonthDay()
+	if !strings.Contains(today, "-") {
+		t.Errorf("Expected a valid date string, got %s", today)
+	}
+
 }
 
 func TestGetTimeRFC(t *testing.T) {
 	now := time.Now().Unix()
-	utilkit.GetTimeRFC(now)
+	rfcTime := utilkit.GetTimeRFC(now)
+	if _, err := time.Parse(time.RFC3339, rfcTime); err != nil {
+		t.Errorf("Expected valid RFC3339 time format, got %s", rfcTime)
+	}
 }

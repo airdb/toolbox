@@ -3,10 +3,7 @@ package utilkit
 import (
 	"bytes"
 	"io"
-	"io/ioutil"
 	"text/template"
-
-	"github.com/airdb/toolbox/byteutil"
 )
 
 func TemplateGenerateString(str string, data interface{}) (string, error) {
@@ -24,12 +21,12 @@ func TemplateGenerateString(str string, data interface{}) (string, error) {
 }
 
 func TemplateGenerateFileFromReader(reader io.Reader, dstPath string, data interface{}) error {
-	b, err := ioutil.ReadAll(reader)
+	b, err := io.ReadAll(reader)
 	if err != nil {
 		return err
 	}
 
-	content, err := TemplateGenerateString(byteutil.BytesToString(b), data)
+	content, err := TemplateGenerateString(BytesToString(b), data)
 	if err != nil {
 		return err
 	}

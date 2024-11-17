@@ -3,7 +3,6 @@ package utilkit
 import (
 	"archive/tar"
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
@@ -17,7 +16,6 @@ const (
 
 func Exists(path string) bool {
 	_, err := os.Stat(path)
-
 	return !os.IsNotExist(err)
 }
 
@@ -39,14 +37,15 @@ func EnsureFileExists(path string) {
 
 	EnsureFolderExists(filepath.Dir(path))
 
-	err := ioutil.WriteFile(path, nil, FilePerm644)
+	file, err := os.Create(path)
 	if err != nil {
 		log.Fatal("file not exists, err: ", err)
 	}
+	file.Close()
 }
 
 func ReadFile(path string) ([]byte, error) {
-	content, err := ioutil.ReadFile(path)
+	content, err := os.ReadFile(path)
 	if err != nil {
 		log.Fatal("read file fail, err: ", err)
 		return nil, err
@@ -58,7 +57,7 @@ func ReadFile(path string) ([]byte, error) {
 func WriteFile(path string, content string) error {
 	EnsureFileExists(path)
 
-	err := ioutil.WriteFile(path, StringToBytes(content), FilePerm644)
+	err := os.WriteFile(path, []byte(content), FilePerm644)
 	if err != nil {
 		return err
 	}
