@@ -1,4 +1,4 @@
-package oskit
+package osutil
 
 import (
 	"os"

@@ -1,13 +1,13 @@
-package oskit_test
+package osutil_test
 
 import (
 	"time"
 
-	"github.com/airdb/toolbox/oskit"
+	"github.com/airdb/toolbox/osutil"
 )
 
 func ExampleBar_NewOption() {
-	var bar oskit.Bar
+	var bar osutil.Bar
 
 	bar.NewOption(0, 100)
 

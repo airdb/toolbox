@@ -1,4 +1,4 @@
-package deploykit
+package deployutil
 
 import (
 	"os"

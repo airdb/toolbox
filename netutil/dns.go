@@ -1,11 +1,11 @@
-package netkit
+package netutil
 
 import (
 	"log"
 	"strings"
 	"time"
 
-	"github.com/airdb/toolbox/typekit"
+	"github.com/airdb/toolbox/typeutil"
 	"github.com/miekg/dns"
 	"golang.org/x/net/publicsuffix"
 )
@@ -83,7 +83,7 @@ func ToDomainWithDot(domain string) string {
 }
 
 func TrimDomainDot(domain string) string {
-	return strings.TrimSuffix(domain, typekit.DelimiterDot)
+	return strings.TrimSuffix(domain, typeutil.DelimiterDot)
 }
 
 func GetRootDomain(name string) (string, error) {

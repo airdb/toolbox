@@ -1,16 +1,16 @@
-package asn2ip_test
+package netutil_test
 
 import (
 	"strings"
 	"testing"
 
-	"github.com/airdb/toolbox/asn2ip"
+	"github.com/airdb/toolbox/netutil"
 )
 
 func TestRun(t *testing.T) {
 	t.Log("TestRun")
 
-	fetcher := asn2ip.NewFetcher("whois.radb.net", 43)
+	fetcher := netutil.NewFetcher("whois.radb.net", 43)
 
 	asnum := "AS4134"
 	asnum = strings.ReplaceAll(asnum, "AS", "")

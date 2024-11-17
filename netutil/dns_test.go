@@ -1,4 +1,4 @@
-package netkit_test
+package netutil_test
 
 /*
 import (

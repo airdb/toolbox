@@ -1,4 +1,4 @@
-package asn2ip
+package netutil
 
 import (
 	"bytes"

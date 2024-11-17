@@ -1,4 +1,4 @@
-package typekit
+package typeutil
 
 // Delimiter const value.
 const (

@@ -1,4 +1,4 @@
-package typekit
+package typeutil
 
 import "time"
 
